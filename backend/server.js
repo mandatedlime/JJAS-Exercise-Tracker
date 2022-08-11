@@ -10,9 +10,10 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.ATLAS_URI;
+// const uri = process.env.ATLAS_URI;
 
-mongoose.connect(uri, { useNewUrlParser: true }
+mongoose.connect(process.env.ATLAS_URI || `mongodb+srv://JORAM:jo5115621@cluster0.ao1j6jd.mongodb.net/?retryWrites=true&w=majority
+`, { useNewUrlParser: true }
 );
 const connection = mongoose.connection;
 connection.once('open', () => {
