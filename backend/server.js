@@ -12,7 +12,8 @@ app.use(express.json());
 
 // const uri = process.env.ATLAS_URI;
 
-mongoose.connect(process.env.ATLAS_URI || `mongodb+srv://JORAM:jo5115621@cluster0.ao1j6jd.mongodb.net/?retryWrites=true&w=majority
+mongoose.connect(process.env.ATLAS_URI || `mongodb+srv://JORAM:jo5115621@cluster0.ao1j6jd.mongodb.net/test?
+
 `, { useNewUrlParser: true }
 );
 const connection = mongoose.connection;
